@@ -99,6 +99,7 @@
 <style scoped>
   .index {
     height: 100%;
+    background: #f7f7fa;
   }
   .index .m-tab {
     position: relative;

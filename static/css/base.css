@@ -1,4 +1,91 @@
 html,
 body {
   height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-center {
+  text-align: center;
+}
+.color-a {
+  color: #333;
+}
+.color-b {
+  color: #666;
+}
+.color-c {
+  color: #999;
+}
+.color-d {
+  color: #1686ec;
+}
+.color-e {
+  color: #d8354d;
+}
+.color-f {
+  color: #fff;
+}
+.color-g {
+  color: #ff7979;
+}
+.color-h {
+  color: #0088ff;
+}
+.color-i {
+  color: #ef8e00;
+}
+.color-j {
+  color: #53d8ff;
+}
+.color-k {
+  color: #f177ff;
+}
+.color-l {
+  color: #EC798D;
+}
+.color-m {
+  color: #c8c8c8;
+}
+.size-a {
+  font-size: 12px;
+}
+.size-b {
+  font-size: 14px;
+}
+.size-c {
+  font-size: 16px;
+}
+.size-d {
+  font-size: 18px;
+}
+.size-e {
+  font-size: 20px;
+}
+.size-f {
+  font-size: 22px;
+}
+.size-g {
+  font-size: 24px;
+}
+.size-h {
+  font-size: 26px;
+}
+.size-i {
+  font-size: 28px;
 }
