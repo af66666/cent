@@ -20,21 +20,21 @@
 
     <div class="m-tab">
       <div class="m-navbar">
-        <a class="m-items m-active" @click="tabs" sign="a">
+        <a class="m-items" :class="{ mactive : boxa }" @click="tabs('a')" >
           医疗险
           <i class="m-sign"></i>
         </a>
-        <a class="m-items" @click="tabs" sign="b">
+        <a class="m-items" :class="{ mactive : boxb }" @click="tabs('b')" >
           重疾险
           <i class="m-sign"></i>
         </a>
-        <a class="m-items" @click="tabs" sign="c">
+        <a class="m-items" :class="{ mactive : boxc }" @click="tabs('c')" >
           寿险
           <i class="m-sign"></i>
         </a>
       </div>
       <div class="m-sub">
-        <div class="m-subbox m-subon" v-if="idx === 'a'">
+        <div class="m-subbox" v-if="idx === 'a'">
           <a class="card">
             <div class="cardhead">
               <div class="cardbox">
@@ -86,10 +86,10 @@
             </div>
           </a>
         </div>
-        <div class="m-subbox" v-if="idx === 'b'">
+        <div class="m-subbox" v-else-if="idx === 'b'">
           <h1>页面二</h1>
         </div>
-        <div class="m-subbox" v-if="idx === 'c'">
+        <div class="m-subbox" v-else="idx === 'c'">
           <h1>页面三</h1>
         </div>
       </div>
@@ -102,13 +102,30 @@
     name: "insure",
     data() {
       return {
-        idx: 'a'
+        idx: 'a',
+        boxa: true,
+        boxb: false,
+        boxc: false
       }
     },
     methods: {
-      tabs (){
-        App.idx = 'c';
-        console.log(1);
+      tabs (e){
+        this.idx = e;
+        console.log(e);
+        var me = e;
+        if(me == 'a'){
+          this.boxa = true;
+          this.boxb = false;
+          this.boxc = false;
+        }else if(me == 'b'){
+          this.boxa = false;
+          this.boxb = true;
+          this.boxc = false;
+        }else{
+          this.boxa = false;
+          this.boxb = false;
+          this.boxc = true;
+        }
       }
     }
   }
@@ -170,11 +187,11 @@
     color: #888;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
-  .index .m-items.m-active {
+  .index .m-items.mactive {
     color: #333;
     font-size: 17px;
   }
-  .index .m-active .m-sign {
+  .index .mactive .m-sign {
     display: block;
     position: absolute;
     bottom: 5px;
@@ -187,12 +204,6 @@
   .index .m-sub {
     padding: 50px 15px 54px;
     box-sizing: border-box;
-  }
-  .index .m-subbox {
-    display: none;
-  }
-  .index .m-subbox.m-subon {
-    display: block;
   }
   .index .card {
     display: block;
