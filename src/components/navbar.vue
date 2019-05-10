@@ -8,7 +8,7 @@
       </div>
       <p class="weui-tabbar__label">首页</p>
     </router-link>
-    <router-link to="/insure" class="weui-tabbar__item">
+    <router-link to="/articles" class="weui-tabbar__item">
       <div class="weui-tabbar__icon">
         <i class="iconfont icon-wode"></i>
       </div>
@@ -33,8 +33,8 @@
   .weui-tabbar {
     background: #fff;
   }
-.router-link-active .weui-tabbar__label {
-  color: #1686ec;
-}
+  .router-link-active .weui-tabbar__label {
+    color: #1686ec;
+  }
 
 </style>
