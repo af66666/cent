@@ -55,17 +55,27 @@
         </div>
       </a>
     </div>
+    <v-nav></v-nav>
+
   </div>
 </template>
 
 <script>
-    export default {
-        name: "market"
+  import navbar from '../components/navbar'
+
+  export default {
+    name: "market",
+    components: {
+      "v-nav": navbar
     }
+  }
 </script>
 
 <style scoped lang="scss">
   .market {
+    padding-bottom: 56px;
+    height: 100%;
+    overflow-y: auto;
     .titles {
       padding: 10px 15px;
       font-size: 20px;

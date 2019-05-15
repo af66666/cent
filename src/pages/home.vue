@@ -25,17 +25,19 @@
       </div>
     </div>
     <div class="assess">
-      <a href="javascript:void(0);">
-        <img class="assessimg" src="../assets/images/index15.png" alt="图片加载失败" />
-        <div class="assessbox flex">
-          <div class="color-a size-f">
-            Medin AI大数据
-            <div class="color-b size-b">为你推荐适合你的保险</div>
+      <div class="assesscard">
+        <a href="javascript:void(0);">
+          <img class="assessimg" src="../assets/images/index15.png" alt="图片加载失败" />
+          <div class="assessbox flex">
+            <div class="color-a size-f">
+              AI大数据
+              <div class="color-b size-b">为你推荐适合你的保险</div>
+            </div>
+            <div class="assessbtn">智能<br />推荐</div>
           </div>
-          <div class="assessbtn">智能<br />推荐</div>
-        </div>
-        <img class="wave" src="../assets/images/index16.png" alt="图片加载失败" />
-      </a>
+          <img class="wave" src="../assets/images/index16.png" alt="图片加载失败" />
+        </a>
+      </div>
     </div>
     <div class="custom">
       <div>客户信息</div>
@@ -80,29 +82,37 @@
       </div>
     </div>
     <div class="empty-box hide">
-      <img class="empty" src="../assets/images/empty.png" alt="图片加载失败" />
+      <img class="empty" src="../assets/images/index1.png" alt="图片加载失败" />
       <p class="tip">评估健康风险，智能保险推荐</p>
     </div>
+    <v-nav></v-nav>
 
   </div>
 </template>
 
 <script>
+  import navbar from '../components/navbar'
+
   export default {
-    name: "home"
+    name: "home",
+    components: {
+      "v-nav": navbar
+    }
   }
 </script>
 
 <style scoped lang="scss">
   .index {
-    padding-top: 20px;
-    background: #fff;
+    height: 100%;
+    background: #f5f7fa;
+    overflow-y: auto;
     .flex {
       display: flex;
     }
     .user {
-      margin: 0 15px 20px;
+      padding: 20px 15px;
       align-items: center;
+      background: #fff;
     }
     .avatar {
       display: block;
@@ -149,8 +159,11 @@
       padding-left: 20px;
     }
     .assess {
+      padding: 0 15px;
+      background: #fff;
+    }
+    .assesscard {
       position: relative;
-      margin: 0 15px;
       border-radius: 5px;
       background: #f7fbff;
       overflow: hidden;
@@ -170,8 +183,8 @@
     }
     .assessbtn {
       padding: 6px;
-      width: 42px;
-      height: 42px;
+      width: 54px;
+      height: 54px;
       line-height: 21px;
       text-align: center;
       font-size: 16px;
@@ -212,7 +225,6 @@
     .list {
       min-height: 300px;
       padding: 0 15px 54px;
-      background: #f5f7fa;
     }
     .weui-panel:after,
     .weui-panel:before {
@@ -243,12 +255,12 @@
       border: none;
     }
     .empty-box {
-      background: #f5f7fa;
+      margin-bottom: 112px;
       overflow: hidden;
     }
     .empty {
       display: block;
-      margin: 40px auto;
+      margin: 40px auto 15px;
       width: 90px;
     }
     .tip {

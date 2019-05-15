@@ -8,6 +8,7 @@ import market from '@/pages/market'
 import customer from '@/pages/customer'
 import message from '@/pages/message'
 import articledetail from '@/pages/articleDetail'
+import results from '@/pages/results'
 
 
 Vue.use(Router)
@@ -15,11 +16,6 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',//去掉router中的#号
   routes: [
-    {
-      path: '/hello',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
     {
       path: '/',
       redirect: '/home'
@@ -58,6 +54,11 @@ export default new Router({
       path: '/articledetail',
       name: 'articledetail',
       component: articledetail,
+    },
+    {
+      path: '/results',
+      name: 'results',
+      component: results,
     },
   ]
 })

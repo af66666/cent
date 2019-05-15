@@ -28,7 +28,7 @@
             </div>
           </div>
           <div>
-            <a class="see" href="javascript:;">查看详细报告 <i class="iconfont icon-you"></i></a>
+            <router-link class="see" to="/results">查看详细报告 <i class="iconfont icon-you"></i></router-link>
           </div>
         </div>
         <div class="list">

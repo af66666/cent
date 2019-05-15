@@ -2,17 +2,17 @@
   <div id="app">
     <!--<img src="./assets/logo.png">-->
     <router-view/>
-    <v-nav></v-nav>
+
   </div>
 </template>
 
 <script>
-import navbar from './components/navbar'
+//import navbar from './components/navbar'
 
 export default {
   name: 'App',
   components: {
-    "v-nav": navbar
+    //"v-nav": navbar
   }
 }
 </script>

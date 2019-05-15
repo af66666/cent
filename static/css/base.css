@@ -3,6 +3,9 @@ body {
   height: 100%;
   -webkit-tap-highlight-color: transparent;
 }
+* {
+  box-sizing: border-box;
+}
 .fl {
   float: left;
 }
@@ -19,6 +22,13 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.ellipsis-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .text-center {
   text-align: center;

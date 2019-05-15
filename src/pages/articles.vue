@@ -29,17 +29,27 @@
         </div>
       </a>
     </div>
+    <v-nav></v-nav>
+
   </div>
 </template>
 
 <script>
+  import navbar from '../components/navbar'
+
     export default {
-        name: "articles"
+      name: "articles",
+      components: {
+        "v-nav": navbar
+      }
     }
 </script>
 
 <style scoped lang="scss">
   .articles {
+    padding-bottom: 56px;
+    height: 100%;
+    overflow-y: auto;
     .contents {
       padding-bottom: 55px;
     }
